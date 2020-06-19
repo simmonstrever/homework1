@@ -4,12 +4,15 @@
     margin: 0;
 }
 
+/* clearfix hack to avoid overflow for content and benefits and allow to place next to one another */
 .clearfix::after{
     clear: both;
     content: "";
     display: block;
 }
+
 .clearfix{
+    /* gives a top, right, left a margin of 20px and a bottom margin of 20px */
     margin: 20px 20px 5px 20px;
 }
 
@@ -17,7 +20,9 @@ body {
     background-color: #d9dcd6;
 }
 
+
 .header {
+    /* allows the header to span the full width of the page */
     width: 100%;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -47,9 +52,11 @@ body {
 }
 
 .header div ul li {
+    /* display to put each list item next to one another in the header with respective margins */
     display: inline-block;
     margin-left: 25px;
     text-decoration: underline;
+    /* pushes all items to the right of the header section */
     float: right;
 }
 
@@ -62,6 +69,7 @@ p {
     font-size: 16px;
 }
 
+/* provides the attributes for the img to cover the entire width of the page for the height of 800px */
 .hero {
     height: 800px;
     width: 100%;
@@ -71,25 +79,27 @@ p {
     background-position: center;
 }
 
+/* assigned to .search-engine-optimization and social-media-marketing images */
 .float-left {
     float: left;
     margin-right: 25px;
 }
 
+/* applied to the online-reputation-management image */
 .float-right {
     float: right;
     margin-left: 25px;
 }
 
 .content {
+    /* provides content width as a percentage with respect to window size */
     width: 65%;
     display: inline-block;
-    /* margin-left: 20px; */
-    /* margin-right: 10px; */
-    clear: both;
+    /* floats content section left to allow us to break normal flow and push content section to left side of the page within clearfix <div> */
     float: left;
 }
 
+/* provides attributes to appropriately size each individual element within the content section */
 .search-engine-optimization, .online-reputation-management, .social-media-marketing {
     margin: 0px 0px 20px 0px;
     padding: 50px;
@@ -100,16 +110,16 @@ p {
     display: inline-block;
 }
 
-
+/* overrides the bottom margin of 20px  to 0px to allow content to sit directly above the footer*/
 #social-media-marketing{
     margin-bottom: 0px;
 }
 
 
-
 .benefits {
-    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
     padding: 20px 20px 0px 20px;
+    /*  floats benefits section right to allow us to break normal flow and push benefit section to right side of the page within clearfix <div> */
     float: right;
     width: 30%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -121,42 +131,45 @@ p {
     color: #ffffff;
     text-align: center;
 }
+/* overrides the bottom margin of 32px and sets it to 0 */
+#benefit-cost {
+    margin-bottom: 0px;
+    padding: 10px;
+}
 
-
+/* styles all h3 benefit elements */
 .benefits h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-
+/* provides a display style and max with for images within benefit section */
 .benefit-img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-
-
 .content img {
+    /* gives a max height to the images within content section */
     max-height: 150px;
 }
 
-
+/* appropriately styles each h2 element within the content section */
 .content h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-
+/* gives the footer a top margin of 5px, centers the text, and provides padding rules as well as font*/
 .footer {
     margin-top: 5px;
-    background-color: tomato;
+    background-color: #d9dcd6;
     padding: 30px;
-    clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-
+/* styles the h2 element in footer to a size of 20px */
 .footer h2 {
     font-size: 20px;
 }
